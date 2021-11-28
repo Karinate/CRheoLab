@@ -29,7 +29,8 @@ class volField
 
         // Member Functions
         vectorType readInternalField();
-
+        vectorType magVector();
+        
         // Read Data
         template <typename primitiveType>
         primitiveType readData(std::ifstream& in_file, std::istringstream& iss, std::string& line, int& lineCounter);
