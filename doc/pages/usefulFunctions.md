@@ -11,7 +11,7 @@ This page is dedicated to the useful Functions for the volSacalarField
 The useful functions created for the volField Class aim at providing a set of utilities to manipulate objects of the class and/or create new objects based on previously created objects of the class.
 
 ----
-### Tensor Invariants (Miguel)
+### Tensor Invariants (Miguel v2)
 The volField class can comprise fields of type tensor and symmetric tensor. For these the 3 invariants invariants can be calculated.
 
 For **tensors**
