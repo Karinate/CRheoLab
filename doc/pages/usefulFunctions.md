@@ -104,14 +104,46 @@ Create a scalarField with the magnitude of the vector
 
 ----
 ### Tensor Field related (Mohamed)
-line1
+1- Create a vector field with component of the tensor in one direction
 
-line2
+The component of the tensor in one direction is obtained by multiplying the transpose of the tensor by the unity vector in that direction. As for example for the direction of x, the mathematical operation takes the following form as shown in Eq(1): 
 
-line3
 
-Create a vector field with component of the tensor in one direction
-Create a scalarField with the Tensor Invariants (I1, I2 and I3)
+\begin{equation}
+\begin{pmatrix}
+\sigma _{xx} & \sigma _{xy} & \sigma _{xz}\\ 
+\newline
+\sigma _{yx}& \sigma _{yy} &\sigma _{yz} \\ 
+\newline
+\sigma _{zx}& \sigma _{zy} & \sigma _{zz}\ 
+\end{pmatrix}^{t}\begin{pmatrix}
+1\\ 
+\newline
+0\\ 
+\newline
+0
+\end{pmatrix}
+\end{equation}
 
+That could be achieved in the CrheoLab using the function projectTensorField, where a general vector direction is avaiable.
+
+
+2- Create a scalarField with the Tensor Invariants (I1, I2 and I3)
+
+The first tensor invariant (I1) is calculated as the trace of the tensor (T) i.e. the summation of the main diagonal. The second tensor invariant (I2) is calculated as half the extraction of the square of the tensor’s trace and the trace of the square of the tensor. The third tensor invariant (I3) is calculated as the determine of the tensor. The mathematical description is as shown in Eqs(2)-(4) for I1, I2, and I3 respectively:
+
+\begin{equation}
+I1 =  tr\left [ T \right ] = \sigma _{xx} +\sigma _{yy} +\sigma _{zz}
+\end{equation}
+
+\begin{equation}
+I2 = \frac{1}{2} {\left [ \left [ \sigma _{xx} +\sigma _{yy} +\sigma _{zz}  \right ]^{2} -tr\left [ T .T \right ]\right ]= \sigma _{xx}\sigma _{yy}+\sigma _{yy}\sigma _{zz}+\sigma _{xx}\sigma _{zz}-\sigma _{xy}\sigma _{yx}-\sigma _{yz}\sigma _{zy}-\sigma _{xz}\sigma _{zx}}
+\end{equation}
+
+\begin{equation}
+I3 = \left | T \right | =\sigma _{xx} \left [\sigma _{yy}\sigma _{zz}-\sigma _{yz}\sigma _{zy}  \right ] - \sigma _{xy} \left [ \sigma _{yx}\sigma _{zz}-\sigma _{yz}\sigma _{zx} \right ]+\sigma _{xz}\left [ \sigma _{yx}\sigma _{zy}-\sigma _{yy}\sigma _{zx} \right ]
+\end{equation}
+
+In the CrheoLab, they are calculated using the functions I1, I2, and I3 respectively.
 
 ----
