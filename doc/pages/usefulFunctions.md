@@ -94,6 +94,22 @@ Scale the field with a constant scalar (same documentation as Shift)
 ### Vector Field related (Karinate)
 
 Project the vectors in one direction
+Create a scalarField with the magnitude of the vector
+
+The magnitude of the projection of the vector in a general direction as shown in Eq() is the dot product of this vector with the unit vector of the general direction. The unit vector of the general direction is the vector in the general direction divided by its norm. The projection in the general direction as shown in Eq().
+
+
+\begin{equation}
+\frac{\vec{V}.\vec{P}}{\left \| \vec{P} \right \|} 
+\end{equation}
+
+\begin{equation}
+\frac{\vec{V}.\vec{P}}{\left \| \vec{P} \right \|} \frac{\vec{P}}{\left \| \vec{P} \right \|}
+\end{equation}
+
+------
+
+Project the vectors in one direction
 
 1-Project a VectorField  
 
