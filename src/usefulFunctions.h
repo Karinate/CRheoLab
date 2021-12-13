@@ -12,7 +12,7 @@ inline double magVector(const vectorField& v1){
     for (unsigned int i=0; i < v1.size(); i++) {
         double sum = (  pow(v1[i][0],2)
                         +pow(v1[i][1],2)
-                        +pow(v1[i][2],2);
+                        +pow(v1[i][2],2));
         double result= sqrt(sum);
               return result;
     }   
